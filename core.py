@@ -33,4 +33,5 @@ final_prompt=prompt.invoke(
      }
 )
 response=model.invoke(final_prompt)
+movie_data = parser.parse(response.content)
 print(response.content)

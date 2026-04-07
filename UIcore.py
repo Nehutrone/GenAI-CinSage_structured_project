@@ -48,6 +48,7 @@ if st.button("Extract"):
             })
 
             response = model.invoke(final_prompt)
+            movie_data = parser.parse(response.content)
 
         st.subheader("Extracted Output:")
         st.write(response.content)
